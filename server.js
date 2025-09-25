@@ -1109,33 +1109,36 @@ app.get('/setText', ensurePageExists(async (req, res) => {
         } else {
             // Extraire tout le texte visible de la page
             const pageHTML = await page.content();
-
             // Compter les occurrences de "search-" (insensible à la casse)
             const count = (pageHTML.match(/search-/gi) || []).length;
             console.log(`Le mot "search-" apparaît ${count} fois sur la page.`);
 
             if (count >= 3) {
-                // Effectuer une action si le mot "search-" apparaît au moins 3 fois
-                await typeTextOnKeyboard(page, text, clearFirst = true)
-                res.json({ success: true });
-            }
-
-            // Cliquer à la position spécifiée si des coordonnées sont fournies
-            if (positionX && positionY) {
-                const x = parseInt(positionX, 10);
-                const y = parseInt(positionY, 10);
-
-                if (!isNaN(x) && !isNaN(y)) {
-                    await page.mouse.click(x, y);
+                // Utiliser le clavier virtuel si "search-" apparaît au moins 3 fois
+                console.log('Clavier virtuel activé pour la saisie.');
+                await typeTextOnKeyboard(page, text, clearFirst = true);
+            } else {
+                // Sinon, saisie normale (clic + insertText)
+                console.log('Saisie normale (sans clavier virtuel).');
+                // Cliquer à la position spécifiée si des coordonnées sont fournies
+                if (positionX && positionY) {
+                    const x = parseInt(positionX, 10);
+                    const y = parseInt(positionY, 10);
+                    if (!isNaN(x) && !isNaN(y)) {
+                        await page.mouse.click(x, y);
+                        await page.waitForTimeout(200); // Petit délai après clic
+                    }
                 }
+                // Insérer le texte
+                await page.keyboard.insertText(text);
+                await page.waitForTimeout(200); // Stabiliser après insertText
             }
-
-            // Insérer le texte
-            await page.keyboard.insertText(text);
         }
 
-        res.json({ success: true });
+        // Réponse unique à la fin : succès global
+        res.json({ success: true, message: `Texte "${text}" saisi avec succès (clavier virtuel: ${count >= 3})` });
     } catch (error) {
+        console.error('Erreur dans /setText:', error);
         res.status(500).json({
             success: false,
             message: `Erreur lors de la saisie du texte: ${error.message}`
