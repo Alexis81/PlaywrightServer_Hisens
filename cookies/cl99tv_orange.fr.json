@@ -1,0 +1,272 @@
+[
+  {
+    "name": "_fbp",
+    "value": "fb.1.1740655652158.4860716529",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1743247652,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "XANDR_PANID",
+    "value": "mxQCgrsgwzlzpNmjV3btVn7p0efUVsXVrMnDlAjhYZBuq1kuPd1gGn17otC9isTW70F-NzwKH0txi3J3EYzI2AD6p-_VK49B-lPFo9dfZa8.",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1748431652.698302,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "receive-cookie-deprecation",
+    "value": "1",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1775215652.69832,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "uuid2",
+    "value": "1140321409776431447",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1748856556.079021,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "trust",
+    "value": "62d2893b-be94-453f-b374-9e443b61a4da",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1772191760.031716,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "abv",
+    "value": "A",
+    "domain": ".login.orange.fr",
+    "path": "/",
+    "expires": 1775215751.503842,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "kameleoonVisitorCode",
+    "value": "gltxu2fmiwf8dxyx",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1772191751,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.1245098695.1740655669",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1772191751,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "wassup",
+    "value": "3341303146314637323546424445393936303446313831304433304136343636563d5632202020203932303830313939303030303031623030323430383030303030376630303030303030303030376661682f7630586b2f614b6f722f736d73534577656c43317836516278554d7933657a6968425575514f562b6e6a6b7543794d437734435751752f4a52435277394a51424d79797a4b6b4f6758623632437475424b532b5a4570536234345933584d34696a6b336546525641414e58514a576d66396153354471525544616465467577716d48597041624438414751615932484c49722f49795a30505a6b61566765666565482b31684a52424f4d626b465064637a4a514232414d766c4e39436533307a634f742f6c664646395863486b37644a6f536a4f77655a657a74514338494e7331523266744b49304a785053426e63574934756f2f33414e6b3433706375473435536e304b3369504e696b7a48764f346b727a51765a5a63616b6f4165463751707173732b4f3659324245534131774a36487476634c62396e4a392b6c31464c704a794e3770583279346a67356b35377267426d346a5330482f6e56546a5a4446306c535462486d3734384b31656f7163504c34442b316d4235315978303451366768674e7a4e76493153536b695a4f774f57305041484a677a656b4236375246654331314e6135767358574c4c3371584b534d2b5a2f37515573565877616d692f344d6f543974554959796d436e4e3555395549574c31474a55757774505a73304d552f566d516c44357139614d514a3965546f313138774c5634424f6a544c344d6877324235337865556b3842452f4a352f766f4172535030466a43757a51736f4672666f426b464850534d54454254767646754b646c4c5534517c4d434f3d4f46527c563d56347c585f5741535355505f415554485f4d4554483d327c585f5741535355505f53594e435f434f4f4b49453d37333331347c585f5741535355505f56414c49445f444154453d32303235303930343039323930347c616f6c3d31307c7761643d32303235303330343039323930347c7763743d3245457054694d505a537a43666e746e476b4d4e77676f666a4c66467043545a52",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1756553360.031741,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "rusers4",
+    "value": "Sh6yCFkJhwH3gxGb9yJj487wdjZyuA/ItVLSjl188nEC5FjLNshIFyTd5fwzPdixlFMvFKxhTHinoLZTQqBMhfQusWXlT7ufLY5CjpmUzKj9ifRdr7dTyjf2Z48NWgZ9YwU9CDgf3/U7yxMjwUa0vqo20I5VmnxxvqH82vO/HH76hB3/O1F1DCeOR0D/T/n10hW6mhmc7hffh2/H90gXVNsutHIHJfvfmxvj4PlHnjg=",
+    "domain": ".login.orange.fr",
+    "path": "/",
+    "expires": 1772195360.031785,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_GGSBH6MHDE",
+    "value": "GS1.1.1740655668.1.1.1740655760.0.0.0",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1772191760,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "e593065a99d3f479284f90fb9b588848",
+    "value": "3fb1caa3f3bc4e8753ad71468a260b99",
+    "domain": "lctv2-dev.orange.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "fc80e411687c83b3783ff739bf240a94",
+    "value": "595c6e84fcbdd8bd40867570e94bc5e4",
+    "domain": "lctv2-dev.orange.fr",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "userconsent",
+    "value": "{\"c\":{\"w\":{\"cs\":{\"c1\":\"0\",\"c2\":\"0\",\"c3\":\"0\",\"c4\":\"0\",\"c5\":\"0\",\"c6\":\"0\"},\"t\":\"2025-03-04T09:29:15.210Z\",\"v\":\"2\"}}}",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1772702955,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "utag_main",
+    "value": "v_id:019547295b4e000a774cb81a69db00075002d06d00bd0$_sn:2$_ss:1$_st:1741082355215$_se:15$_pn:1%3Bexp-session$ses_id:1741080544544%3Bexp-session",
+    "domain": ".orange.fr",
+    "path": "/",
+    "expires": 1772616555,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "rlas3",
+    "value": "cI/5bey3BXfpOEGiepgVNU0HlklFRqScot+UVB1jJOU=",
+    "domain": ".rlcdn.com",
+    "path": "/",
+    "expires": 1772616556.12938,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "pxrc",
+    "value": "CJ/pgb4GEgUI6AcQABIGCLbqARAAEggI28IeEM2mGQ==",
+    "domain": ".rlcdn.com",
+    "path": "/",
+    "expires": 1746264556.129487,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "XANDR_PANID",
+    "value": "mxQCgrsgwzlzpNmjV3btVn7p0efUVsXVrMnDlAjhYZBuq1kuPd1gGn17otC9isTW70F-NzwKH0txi3J3EYzI2AD6p-_VK49B-lPFo9dfZa8.",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1748856556.078927,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "receive-cookie-deprecation",
+    "value": "1",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1775640556.078996,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "capping",
+    "value": "eyJlbWRtcGVhc3k6bGl2ZXJhbXAiOiIxNzQxMDgwNTU1IiwiZW1kbXBlYXN5OndlYm9yYW1hX3N5bmMiOiIxNzQxMDgwNTU2IiwiZW1kbXBlYXN5OndlYnJpdmFnZV9waWNraW5nIjoiMTc0MTA4MDU1NSIsImVtZG1wZWFzeTp4YW5kcl9hcHBuZXh1c19waWNraW5nIjoiMTc0MTA4MDU1NSJ9",
+    "domain": ".easydmp.net",
+    "path": "/",
+    "expires": 1772578799.875781,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ecdstpds1",
+    "value": "000001741080556079%3Av%3A3%3AeJwLCnIT4cnkEOQrK08skhFm9GeM5Iwt8MyvCqlj85UvEBcplBZgVvWQd2cK5fOJ4eaT9xYXyvPmj%2FRwFqyQcGFgZckWYHZKrkorlBZi9mXwZjKWCq7IC6tm9WJNcWWrCpUJqpB2YgrMVPBg9uEAACSKGAU%3D%3B",
+    "domain": ".easydmp.net",
+    "path": "/",
+    "expires": 1742203755,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "AFFICHE_W",
+    "value": "hmhYZZlk7IeG35",
+    "domain": ".weborama.fr",
+    "path": "/",
+    "expires": 1775035756.946423,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "livraison",
+    "value": "000001741080556203%3Av%3A3%3AeJwLCnIT4cnkEOQrK08skhFm9GeM5Iwt8MyvCqlj85UvEBcplBZgVvWQd2cK5fOJ4eaT9xYXyvPmj%2FRwFqyQcGFgZckWYHZKrkorlBZi9mXwZjKWCq7IC6tm9WbOcmauC5MJr5RxYQ%2FNVPAIEmaKCJS0j3DzdOSUcuGtNouOcjETYuXjY2IXjg10li%2FS8fWq1mJMcE1g8GVPduarDmUPSJNzYg3l9ctQ9uFw8AMAsWsl%2Fw%3D%3D%3B",
+    "domain": ".easydmp.net",
+    "path": "/",
+    "expires": 1772578799.990204,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "IDE",
+    "value": "AHWqTUl0ly02pVXKo8S0q8rBpQ1AAwCsiz7bT8u5IbIYY6GoP_rFJ3m2uWMOxf-7IBo",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1774776556.026552,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "mics_vid",
+    "value": "123003717070",
+    "domain": ".mediarithmics.com",
+    "path": "/",
+    "expires": 1772616556.104709,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "mics_uaid",
+    "value": "web:1:7bb0acc1-151f-4b5c-802f-c7e24fcc664d",
+    "domain": ".mediarithmics.com",
+    "path": "/",
+    "expires": 1772616556.104769,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "mics_lts",
+    "value": "1741080556311",
+    "domain": ".mediarithmics.com",
+    "path": "/",
+    "expires": 1772616556.104792,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  }
+]
