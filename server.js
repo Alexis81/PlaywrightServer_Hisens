@@ -1111,6 +1111,7 @@ app.get('/setText', ensurePageExists(async (req, res) => {
             const pageText = await page.evaluate(() => document.body.innerText);
             // Compter les occurrences de "search-" (insensible à la casse)
             const count = (pageText.match(/search-/gi) || []).length;
+            console.log(`Le mot "search-" apparaît ${count} fois sur la page.`);
 
             if (count >= 3) {
                 // Effectuer une action si le mot "search-" apparaît au moins 3 fois
