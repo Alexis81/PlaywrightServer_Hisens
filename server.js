@@ -1108,9 +1108,10 @@ app.get('/setText', ensurePageExists(async (req, res) => {
             await page.keyboard.press('F1');
         } else {
             // Extraire tout le texte visible de la page
-            const pageText = await page.evaluate(() => document.body.innerText);
+            const pageHTML = await page.content();
+
             // Compter les occurrences de "search-" (insensible à la casse)
-            const count = (pageText.match(/search-/gi) || []).length;
+            const count = (pageHTML.match(/search-/gi) || []).length;
             console.log(`Le mot "search-" apparaît ${count} fois sur la page.`);
 
             if (count >= 3) {
