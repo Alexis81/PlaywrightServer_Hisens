@@ -1113,7 +1113,7 @@ app.get('/setText', ensurePageExists(async (req, res) => {
             const count = (pageHTML.match(/search-/gi) || []).length;
             console.log(`Le mot "search-" apparaît ${count} fois sur la page.`);
 
-            if (count >= 3) {
+            if (count >= 10) {
                 // Utiliser le clavier virtuel si "search-" apparaît au moins 3 fois
                 console.log('Clavier virtuel activé pour la saisie.');
                 await typeTextOnKeyboard(page, text, clearFirst = true);
@@ -1136,7 +1136,7 @@ app.get('/setText', ensurePageExists(async (req, res) => {
         }
 
         // Réponse unique à la fin : succès global
-        res.json({ success: true, message: `Texte "${text}" saisi avec succès (clavier virtuel: ${count >= 3})` });
+        res.json({ success: true});
     } catch (error) {
         console.error('Erreur dans /setText:', error);
         res.status(500).json({
