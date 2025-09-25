@@ -1107,6 +1107,17 @@ app.get('/setText', ensurePageExists(async (req, res) => {
         } else if (text === "F1") {
             await page.keyboard.press('F1');
         } else {
+            // Extraire tout le texte visible de la page
+            const pageText = await page.evaluate(() => document.body.innerText);
+            // Compter les occurrences de "search-" (insensible à la casse)
+            const count = (pageText.match(/search-/gi) || []).length;
+
+            if (count >= 3) {
+                // Effectuer une action si le mot "search-" apparaît au moins 3 fois
+                await typeTextOnKeyboard(page, text, clearFirst = true)
+                res.json({ success: true });
+            }
+
             // Cliquer à la position spécifiée si des coordonnées sont fournies
             if (positionX && positionY) {
                 const x = parseInt(positionX, 10);
@@ -2124,3 +2135,46 @@ app.get('/setConsentement', ensurePageExists(async (req, res) => {
         });
     }
 }));
+
+
+async function typeTextOnKeyboard(page, textToType, clearFirst = true) {
+
+    // Optionnel : Effacez tout d'abord
+    if (clearFirst) {
+        const clearButton = page.locator('button[aria-label="Tout effacer"]');
+        await clearButton.click();
+        await page.waitForTimeout(200);
+    }
+
+    // Mapping pour caractères spéciaux (ajoutez-en si besoin)
+    const specialKeys = {
+        ' ': 'espace',
+        "'": 'apostrophe',
+        '-': 'tiret',
+        // Backspace : utilisez-le manuellement si besoin, ex. pour corriger
+    };
+
+    // Saisir chaque caractère
+    for (const char of textToType.toUpperCase()) { // Majuscules pour matcher le clavier
+        let keySelector;
+        if (specialKeys[char]) {
+            keySelector = `[aria-label="${specialKeys[char]}"]`;
+        } else if (/[A-Z0-9]/.test(char)) {
+            keySelector = `button.kb-key[aria-label="${char}"]`;
+        } else {
+            console.warn(`Caractère non supporté : ${char}. Ignoré.`);
+            continue;
+        }
+
+        // Attendre et cliquer
+        await page.waitForSelector(keySelector, { timeout: 2000 });
+        const keyButton = page.locator(keySelector);
+        await keyButton.click();
+        await page.waitForTimeout(150); // Délai pour fluidité
+    }
+
+    // Optionnel : Backspace pour corriger (ex. : 2 fois)
+    // const backspace = page.locator('[aria-label="supprimer"]');
+    // await backspace.click();
+    // await backspace.click();
+}
