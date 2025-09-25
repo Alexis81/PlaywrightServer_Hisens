@@ -9,7 +9,6 @@ const fs = require('fs');
 const path = require('path');
 const ini = require('ini');
 const os = require('os');
-const screenshot = require('screenshot-desktop');
 const listEndpoints = require('express-list-endpoints');
 const JSZip = require('jszip');
 const fetch = require('node-fetch');
