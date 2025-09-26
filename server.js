@@ -2144,26 +2144,26 @@ app.get('/setConsentement', ensurePageExists(async (req, res) => {
 
 async function typeTextOnKeyboard(page, textToType, clearFirst = true) {
 
-    // Optionnel : Effacez tout d'abord
+    // Effacez tout d'abord si demandé
     if (clearFirst) {
         const clearButton = page.locator('button[aria-label="Tout effacer"]');
         await clearButton.click();
         await page.waitForTimeout(200);
     }
 
-    // Mapping pour caractères spéciaux (ajoutez-en si besoin)
+    // Mapping pour caractères spéciaux (basé sur votre HTML)
     const specialKeys = {
-        ' ': 'espace',
-        "'": 'apostrophe',
-        '-': 'tiret',
-        // Backspace : utilisez-le manuellement si besoin, ex. pour corriger
+        ' ': { selector: '[aria-label="espace"]', label: 'espace' },
+        "'": { selector: '[aria-label="apostrophe"]', label: 'apostrophe' },
+        '-': { selector: 'button.kb-key[aria-label="tiret"]', label: 'tiret' },
+        // Ajoutez d'autres : ex. backspace { selector: '[aria-label="supprimer"]' }
     };
 
     // Saisir chaque caractère
-    for (const char of textToType.toUpperCase()) { // Majuscules pour matcher le clavier
+    for (const char of textToType.toUpperCase()) { // Majuscules pour matcher
         let keySelector;
         if (specialKeys[char]) {
-            keySelector = `[aria-label="${specialKeys[char]}"]`;
+            keySelector = specialKeys[char].selector;
         } else if (/[A-Z0-9]/.test(char)) {
             keySelector = `button.kb-key[aria-label="${char}"]`;
         } else {
@@ -2171,15 +2171,29 @@ async function typeTextOnKeyboard(page, textToType, clearFirst = true) {
             continue;
         }
 
-        // Attendre et cliquer
+        // Attendre la touche
         await page.waitForSelector(keySelector, { timeout: 2000 });
-        const keyButton = page.locator(keySelector);
-        await keyButton.click();
-        await page.waitForTimeout(150); // Délai pour fluidité
+        const keyElement = page.locator(keySelector);
+
+        // Obtenir les coordonnées de la bounding box
+        const box = await keyElement.boundingBox();
+        if (!box) {
+            console.warn(`Impossible d'obtenir la position pour ${char}`);
+            continue;
+        }
+
+        // Calculer le centre de la touche pour un clic précis
+        const centerX = box.x + box.width / 2;
+        const centerY = box.y + box.height / 2;
+
+        // Déplacer la souris vers le centre (mouvement fluide)
+        await page.mouse.move(centerX, centerY, { steps: 10 }); // 'steps' pour un mouvement progressif
+        await page.waitForTimeout(100); // Pause avant clic
+
+        // Cliquer sur la touche
+        await page.mouse.click(centerX, centerY);
+        await page.waitForTimeout(150); // Délai pour simuler l'appui (ajustez pour vitesse)
     }
 
-    // Optionnel : Backspace pour corriger (ex. : 2 fois)
-    // const backspace = page.locator('[aria-label="supprimer"]');
-    // await backspace.click();
-    // await backspace.click();
+    console.log(`Saisie par souris terminée pour "${textToType}"`);
 }
